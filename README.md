@@ -11,20 +11,20 @@
    * [Visuals](#visuals)  
    * [Installation](#installation)
    * [Usage](#usage)
+   * [Dependencies](#dependencies)
+   * [Credits](#credits)
    * [License](#license)
-   * [Contribution](#contribution)
-   * [Tests](#tests)
    * [Questions](#questions)
  
  
  ## Visuals
- #### Click on the image below to reveal the deployed app:
+ #### Click on the image below to reveal the video walk-through/demonstration:
 
- [![Screenshot](.png or .jpg image here)](https://website will go here)
+ [![Screenshot](assets\employeetracker.png)](https://website will go here)
  
  
  ## Installation
- #### To install the given application:
+ #### How to install the application:
   * 
    
  
@@ -63,15 +63,22 @@ Delete departments, roles, and employees.
 View the total utilized budget of a department—in other words, the combined salaries of all employees in that department.
 
  
- ## License
+ ## Dependencies
+  * [inquirer](https://www.npmjs.com/package/inquirer/v/8.2.4)
+  * [express](https://www.npmjs.com/package/express)
+  * [mysql2](https://www.npmjs.com/package/mysql2) 
+  * [cfonts](https://www.npmjs.com/package/cfonts)
+ 
+
+ ## Credits
+  * [SQL - W3Schools](https://www.w3schools.com/sql/sql_intro.asp)
+  * [MySQL - W3Schools](https://www.w3schools.com/mysql/mysql_sql.asp)
+ 
+
+## License
    This project is covered under the following license: [![License](https://img.shields.io/badge/License-MIT-turquoise.svg)](https://opensource.org/licenses/MIT)
  
- ## Contribution
-   One can contribute by cloning the repo from the github page, adding a new branch, and pushing changes to the main branch. 
- 
- ## Tests
-   Testing can be done by using a RESTful api/server side app like POSTMAN or INSMONIA to debug and test all CRUD commands or test can be done using the CLI in VS Code. 
- 
+
  ## Questions
    If you have any questions, please email me at: knickler3@gmail.com <br/>
    My GitHub page is: [kwaters3](https://github.com/kwaters3)

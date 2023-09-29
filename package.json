@@ -1,0 +1,22 @@
+{
+  "name": "employee-tracker",
+  "version": "1.0.0",
+  "description": "app that tracks a company's database by departments, roles, employees, and salary",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "node",
+    "node.js",
+    "express.js",
+    "sql",
+    "mysql",
+    "inquirer",
+    "fs",
+    "json"
+  ],
+  "author": "Katie Waters",
+  "license": "ISC"
+}
