@@ -121,11 +121,17 @@ function startPrompt() {
 
   function viewAllEmployees() {
       db.query(`
-        SELECT role.id, 
+        SELECT employee.id, 
+        CONCAT (employee.first_name, ' ', employee.last_name) EMPLOYEE,
         role.title TITLE, 
+        department.name DEPARTMENT,
         role.salary SALARY, 
-        department.name DEPARTMENT
-        FROM role JOIN department
+        CONCAT (manager.first_name, ' ', manager.last_name) MANAGER
+        FROM employee JOIN role
+        ON employee.role_id = role.id
+        LEFT JOIN employee manager
+        ON employee.manager_id = manager.id
+        RIGHT JOIN department
         ON role.department_id = department.id`, (err, res) => {
           console.error(err);
           console.table(res);

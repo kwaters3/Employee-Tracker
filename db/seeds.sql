@@ -6,7 +6,7 @@ VALUES ("Sales"),
        ("Legal");
       
 
--- Adding data into roles table - TITLE, SALARY, DEPARTMEMT ID columns--
+-- Adding data into role table - TITLE, SALARY, DEPARTMEMT ID columns--
 INSERT INTO role (title, salary, department_id)
 VALUES ("Sales Lead", 100000, 1),
        ("Salesperson", 80000, 1),
@@ -18,8 +18,8 @@ VALUES ("Sales Lead", 100000, 1),
        ("Lawyer", 190000, 4);
        
 
--- Adding data into employees table - FirstName, LastName, Roles ID, Manager ID columns--
-INSERT INTO employee (first_name, last_name, roles_id, manager_id)
+-- Adding data into employees table - FirstName, LastName, Role ID, Manager ID columns--
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES ("Road", "Runner", 1, NULL),
        ("Wile E.", "Coyote", 2, 1),
        ("Elmer", "Fudd", 3, NULL),
