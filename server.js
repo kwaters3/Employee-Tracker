@@ -96,8 +96,10 @@ function startPrompt() {
 
 
   function viewAllDepartments() {
-      db.query(`SELECT * FROM department`, (err, res) => {
+      db.query(`SELECT * FROM department`, 
+        (err, res) => {
         console.error(err);
+        console.log('Please see below:');
         console.table(res);
         startPrompt();
   });
@@ -110,9 +112,11 @@ function startPrompt() {
         role.title TITLE, 
         role.salary SALARY, 
         department.name DEPARTMENT
-        FROM role JOIN department
-        ON role.department_id = department.id`, (err, res) => {
+        FROM role 
+        JOIN department ON role.department_id = department.id`, 
+          (err, res) => {
           console.error(err);
+          console.log('Please see below:');
           console.table(res);
           startPrompt();
     });
@@ -127,20 +131,37 @@ function startPrompt() {
         department.name DEPARTMENT,
         role.salary SALARY, 
         CONCAT (manager.first_name, ' ', manager.last_name) MANAGER
-        FROM employee JOIN role
-        ON employee.role_id = role.id
-        LEFT JOIN employee manager
-        ON employee.manager_id = manager.id
-        RIGHT JOIN department
-        ON role.department_id = department.id`, (err, res) => {
+        FROM employee 
+        JOIN role ON employee.role_id = role.id
+        LEFT JOIN employee manager ON employee.manager_id = manager.id
+        RIGHT JOIN department ON role.department_id = department.id`, 
+          (err, res) => {
           console.error(err);
+          console.log('Please see below:');
           console.table(res);
           startPrompt();
     });
 }
 
 
-
+  function addDepartment() {
+    inquirer
+      .prompt ({
+        type: "input",
+        name: "deptName",
+        message: "What is the name of the new department?",
+      })
+      .then((response) => {
+        db.query(`INSERT INTO department (name) VALUES ('${response.deptName}')`, 
+          (err, res) => {
+          console.error(err);
+          startPrompt();
+          })
+        })
+      }
+    
+      
+  
 
 
 
