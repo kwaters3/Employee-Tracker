@@ -155,13 +155,82 @@ function startPrompt() {
         db.query(`INSERT INTO department (name) VALUES ('${response.deptName}')`, 
           (err, res) => {
           console.error(err);
+          console.log(`New department: ${response.deptName} added to company database!`);
           startPrompt();
           })
         })
       }
+
+      
+
+   function addRole() {
+    inquirer
+      .prompt ([
+      {
+        type: "input",
+        name: "title",
+        message: "What is the TITLE of the new role?",
+      },
+      {
+        type: "input",
+        name: "salary",
+        message: "What is the SALARY of the new role?",
+      },
+      {
+        type: "input",
+        name: "department_id",
+        message: "What is the department id number?",
+      }
+    ])
+      .then((response) => {
+        db.query(`INSERT INTO role (title, salary, department_id) VALUES ('${response.title}', '${response.salary}', '${response.department_id}')`, 
+          (err, res) => {
+          console.error(err);
+          console.log(`New role: ${response.title} added to company database!`);
+          startPrompt();
+          })
+        })
+      }   
     
+
+  
+    function addEmployee() {
+    inquirer
+      .prompt ([
+      {
+        type: "input",
+        name: "first_name",
+        message: "What is the First Name of the new employee?",
+      },
+      {
+        type: "input",
+        name: "last_name",
+        message: "What is the Last Name of the new employee?",
+      },
+      {
+        type: "input",
+        name: "role_id",
+        message: "What is the employee's role ID?",
+      },
+      {
+        type: "input",
+        name: "manager_id",
+        message: "What is the employees Manager's ID?",
+      }
+    ])
+      .then((response) => {
+        db.query(`INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES ('${response.first_name}', '${response.last_name}', '${response.role_id}', '${response.manager_id}')`, 
+          (err, res) => {
+          console.error(err);
+          console.log(`New role: ${response.title} added to company database!`);
+          startPrompt();
+          })
+        })
+      }   
       
   
+    
+   
 
 
 
