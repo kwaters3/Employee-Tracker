@@ -24,7 +24,7 @@
  ## Visuals
  #### Click on the image below to reveal the video walk-through/demonstration:
 
- [![Screenshot](./assets/images/employeetracker.png)](https://website will go here)
+ [![Screenshot](./assets/images/screenshot1.png)](https://website will go here)
  
  
 
