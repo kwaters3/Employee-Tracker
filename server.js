@@ -27,6 +27,7 @@ cfonts.say('Welcome to \n"Employee-Tracker"', {
 });
 
 // Command prompts
+
 function startPrompt() {
   inquirer
     .prompt ({
@@ -244,59 +245,59 @@ function startPrompt() {
 
 
 
-      function deleteDepartmentRoleEmployee () {
-        inquirer
-        .prompt ({
-          type: "list",
-          name: "delete",
-          message: "What would you like to do?",
-          choices: [
-            "Remove a department",
-            "Remove a role",
-            "Remove an employee",
-          ],
-        })
-        .then((response) => {
-          switch (response.delete) {
-              case "Remove a department":
-                  deleteDepartment();
-                  break;
-              case "Remove a role":
-                  deleteRole();
-                  break;
-              case "Remove an employee":
-                  deleteEmployee();
-                  break;
-              }
-            });
-          }
-
-
-      function deleteDepartment() {
-        inquirer
-          .prompt ([
-          {
-            type: "input",
-            name: "department_id",
-            message: "Please verify the department ID of the department you would like to delete?",
-          },
-        ])
-          .then((response) => {
-            db.query(
-              `DELETE FROM department WHERE id = ?`, 
-              [response.department_id],
-              (err, res) => {
-              err
-              ? console.error(err)
-              : console.log(`Department successfully deleted!`);
-              startPrompt();  
-              });
-            });
+    function deleteDepartmentRoleEmployee() {
+      inquirer
+      .prompt ({
+        type: "list",
+        name: "delete",
+        message: "What would you like to do?",
+        choices: [
+          "Remove a department",
+          "Remove a role",
+          "Remove an employee",
+        ],
+      })
+      .then((response) => {
+        switch (response.delete) {
+            case "Remove a department":
+                deleteDepartment();
+                break;
+            case "Remove a role":
+                deleteRole();
+                break;
+            case "Remove an employee":
+                deleteEmployee();
+                break;
+            }
+          });
         }
 
 
+    function deleteDepartment() {
+      inquirer
+        .prompt ([
+        {
+          type: "input",
+          name: "department_id",
+          message: "Please verify the department ID of the department you would like to delete?",
+        },
+      ])
+        .then((response) => {
+          db.query(
+            `DELETE FROM department WHERE id = ?`, 
+            [response.department_id],
+            (err, res) => {
+            err
+            ? console.error(err)
+            : console.log(`Department successfully deleted!`);
+            startPrompt();  
+            });
+          });
+      }
 
-      function deleteRole() {
+
+
+    function deleteRole() {
       inquirer
         .prompt ([
         {
@@ -313,53 +314,53 @@ function startPrompt() {
             console.error(err);
             console.log(`Role successfully deleted!`);
             startPrompt();  
-            });
           });
-        }
+        });
+      }
 
 
 
-      function deleteEmployee() {
-        const showALL = "SELECT * FROM employee";
+    function deleteEmployee() {
+      const showALL = "SELECT * FROM employee";
         db.query(showALL, (err, res) => {
           err
           ? console.error(err)
           : console.table(res);
         });
-        inquirer
-          .prompt ([
-            {
-              type: "input",
-              name: "full_name",
-              message: "Which employee (First & Last name) would you like to delete?",
-            },
+          inquirer
+            .prompt ([
+              {
+                type: "input",
+                name: "full_name",
+                message: "Which employee (First & Last name) would you like to delete?",
+              },
           ])
-            .then((response) => {
-              const [first_name, last_name] = response.full_name.split(" ");
-              db.query(
-                `SELECT * FROM employee WHERE first_name = ? AND last_name = ?`,
-                [first_name, last_name],
-                (err, results) => {
-                  if (err) {
-                    console.error(err);
-                    deleteEmployee();
-                  } else if (results.length === 0) {
-                    console.log(`Employee ${first_name} ${last_name} not found in the database.`);
-                    deleteEmployee();
-                  } else {
-                db.query(
-                  `DELETE FROM employee WHERE first_name = ? AND last_name = ?`, 
-                  [first_name, last_name],
-                  (err, res) => {
+          .then((response) => {
+            const [first_name, last_name] = response.full_name.split(" ");
+            db.query(
+              `SELECT * FROM employee WHERE first_name = ? AND last_name = ?`,
+              [first_name, last_name],
+              (err, results) => {
+                if (err) {
                   console.error(err);
-                  console.log(`Successfully deleted ${first_name} ${last_name} from the company's database!`);
-                  startPrompt();  
-                }
-              );
-            }
-          });
+                  deleteEmployee();
+                } else if (results.length === 0) {
+                  console.log(`Employee ${first_name} ${last_name} not found in the database.`);
+                  deleteEmployee();
+                } else {
+              db.query(
+                `DELETE FROM employee WHERE first_name = ? AND last_name = ?`, 
+                [first_name, last_name],
+                (err, res) => {
+                console.error(err);
+                console.log(`Successfully deleted ${first_name} ${last_name} from the company's database!`);
+                startPrompt();  
+              }
+            );
+          }
         });
-      }
+      });
+    }
 
 
 

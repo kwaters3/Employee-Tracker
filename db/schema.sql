@@ -6,14 +6,14 @@ USE company_db;
 
 CREATE TABLE department (
   id INT NOT NULL AUTO_INCREMENT,
-  name VARCHAR (30) NOT NULL,
+  name VARCHAR (255) NOT NULL,
   PRIMARY KEY (id)
 );
 
 
 CREATE TABLE role (
   id INT NOT NULL AUTO_INCREMENT,
-  title VARCHAR (30) NOT NULL,
+  title VARCHAR (255) NOT NULL,
   salary DECIMAL (10, 2) NOT NULL, 
   department_id INT NOT NULL,
   PRIMARY KEY (id),
@@ -24,8 +24,8 @@ CREATE TABLE role (
 
 CREATE TABLE employee (
   id INT AUTO_INCREMENT,
-  first_name VARCHAR(30),
-  last_name VARCHAR(30),
+  first_name VARCHAR(255),
+  last_name VARCHAR(255),
   role_id INT NOT NULL,
   manager_id INT, 
   PRIMARY KEY (id),
