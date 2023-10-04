@@ -48,7 +48,9 @@ The Employee-Tracker App allows one to view and manage a company's employee data
 
 - Then, if the user selects: `add a department`, `add a role`, or `add an employee`, then they are able to create a new index for the given data.
 
-- Finally, if the user selects: `update an employee role`, then they are able to update the given data.
+- Then, if the user selects: `update an employee role`, then they are able to update the given data.
+
+- Finally, if the user selects: `delete departments, roles, and employees`, then they are able to delete by department, a role, or an employee. 
 
 ## Dependencies
 
@@ -71,8 +73,6 @@ The Employee-Tracker App allows one to view and manage a company's employee data
 - View employees by manager
 
 - View employees by department
-
-- Delete departments, roles, and employees
 
 - View the total utilized budget of a department—in other words, the combined salaries of all employees in that department
 
