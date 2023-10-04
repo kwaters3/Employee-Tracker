@@ -1,93 +1,86 @@
 # Employee-Tracker
- 
-   [![License](https://img.shields.io/badge/License-MIT-turquoise.svg)](https://opensource.org/licenses/MIT) 
 
+[![License](https://img.shields.io/badge/License-MIT-turquoise.svg)](https://opensource.org/licenses/MIT)
 
- ## Description
- The Employee-Tracker App allows one to view and manage a company's employee database, using Node.js, Inquirer, and MySQL. The application tracks the database by departments, roles, and employees to better organize and plan a business. 
+## Description
 
- 
+The Employee-Tracker App allows one to view and manage a company's employee database, using Node.js, Inquirer, and MySQL. The application tracks the database by departments, roles, and employees to better organize and plan a business.
 
- ## Table of Contents
-   * [Description](#description)
-   * [Visuals](#visuals)  
-   * [Installation](#installation)
-   * [Usage](#usage)
-   * [Dependencies](#dependencies)
-   * [Credits](#credits)
-   * [Future-Development](#future-development)
-   * [License](#license)
-   * [Questions](#questions)
- 
- 
+## Table of Contents
 
- ## Visuals
- #### Click on the image below to reveal the video walk-through/demonstration:
+- [Description](#description)
+- [Visuals](#visuals)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Dependencies](#dependencies)
+- [Credits](#credits)
+- [Future-Development](#future-development)
+- [License](#license)
+- [Questions](#questions)
 
- [![Screenshot](./assets/images/screenshot1.png)](https://website will go here)
- 
- 
+## Visuals
 
- ## Installation
- #### How to install the application:
-  * First, clone the git repository from GitHub
+#### Click on the image below to reveal the video walk-through/demonstration:
 
-  * Next, install the required packages by using the following command: npm install
+[![Screenshot](./assets/images/screenshot1.png)](https://drive.google.com/file/d/1QbotX_8gA8kMAfb2h3Fc35aLuqua1c3N/view)
 
-  * Then, invoke the application by using the following command: npm start 
+## Installation
 
-  * Finally, the user will have access to the Employee Tracker's database of departments, roles, and employees.
-   
+#### How to install the application:
 
- 
- ## Usage
- #### How to use the application:
-  * First, install the given application/project
+- First, clone the git repository from GitHub
 
-  * Next, the command-line application will prompt the user with the following: `view all departments`, `view all roles`, `view all employees`, `add a department`, `add a role`, `add an employee` & `update an employee role`. 
+- Next, install the required packages by using the following command: npm install
 
-  * Then, if the user selects: `view all departments`, `view all roles`, or `view all employees`, then they are presented with a table displaying the given data. 
+- Then, invoke the application by using the following command: npm start
 
-  * Then, if the user selects: `add a department`, `add a role`, or `add an employee`, then they are able to create a new index for the given data. 
+- Finally, the user will have access to the Employee Tracker's database of departments, roles, and employees.
 
-  * Finally, if the user selects: `update an employee role`, then they are able to update the given data. 
+## Usage
 
+#### How to use the application:
 
- 
- ## Dependencies
-  * [inquirer](https://www.npmjs.com/package/inquirer/v/8.2.4)
-  * [express](https://www.npmjs.com/package/express)
-  * [mysql2](https://www.npmjs.com/package/mysql2) 
-  * [cfonts](https://www.npmjs.com/package/cfonts)
- 
+- First, install the given application/project
 
+- Next, the command-line application will prompt the user with the following: `view all departments`, `view all roles`, `view all employees`, `add a department`, `add a role`, `add an employee` & `update an employee role`.
 
- ## Credits
-  * [SQL - W3Schools](https://www.w3schools.com/sql/sql_intro.asp)
-  * [MySQL - W3Schools](https://www.w3schools.com/mysql/mysql_sql.asp)
- 
+- Then, if the user selects: `view all departments`, `view all roles`, or `view all employees`, then they are presented with a table displaying the given data.
 
+- Then, if the user selects: `add a department`, `add a role`, or `add an employee`, then they are able to create a new index for the given data.
+
+- Finally, if the user selects: `update an employee role`, then they are able to update the given data.
+
+## Dependencies
+
+- [inquirer](https://www.npmjs.com/package/inquirer/v/8.2.4)
+- [express](https://www.npmjs.com/package/express)
+- [mysql2](https://www.npmjs.com/package/mysql2)
+- [cfonts](https://www.npmjs.com/package/cfonts)
+
+## Credits
+
+- [SQL - W3Schools](https://www.w3schools.com/sql/sql_intro.asp)
+- [MySQL - W3Schools](https://www.w3schools.com/mysql/mysql_sql.asp)
 
 ## Future-Development
+
 #### Below are additional commands that I would like to include to further develop the application:
-  * Update employee managers
 
-  * View employees by manager
+- Update employee managers
 
-  * View employees by department
+- View employees by manager
 
-  * Delete departments, roles, and employees
+- View employees by department
 
-  * View the total utilized budget of a department—in other words, the combined salaries of all employees in that department
-  
+- Delete departments, roles, and employees
 
+- View the total utilized budget of a department—in other words, the combined salaries of all employees in that department
 
 ## License
-   This project is covered under the following license: [![License](https://img.shields.io/badge/License-MIT-turquoise.svg)](https://opensource.org/licenses/MIT)
- 
 
+This project is covered under the following license: [![License](https://img.shields.io/badge/License-MIT-turquoise.svg)](https://opensource.org/licenses/MIT)
 
- ## Questions
-   If you have any questions, please email me at: knickler3@gmail.com <br/>
-   My GitHub page is: [kwaters3](https://github.com/kwaters3)
-   
+## Questions
+
+If you have any questions, please email me at: knickler3@gmail.com <br/>
+My GitHub page is: [kwaters3](https://github.com/kwaters3)
